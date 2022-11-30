@@ -1,7 +1,12 @@
 <?php
 
 $actionType = $_GET['type'];
-$value = (int) $_GET['value'];
+$value = $_GET['value'];
+
+if(!is_numeric($value)){
+    echo "must be number!";
+    exit;
+}
 
 if($actionType == 'segitiga'){
     $segitiga = str_split($value);
